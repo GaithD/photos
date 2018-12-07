@@ -1,0 +1,20 @@
+<div class="photosCont">
+
+  <app-photo-frame *ngFor="let photo of photos; let i = index" class="photoFrame" [photoOB]="photo"
+                   (click)="selectImage(i)"></app-photo-frame>
+
+
+  <div class="modalFrame" *ngIf="selectedPhotoOB && selectedPhotoOB.id >= 0">
+    <div class="modalImg">
+      <div class="imgDiv">
+        <span class="close" (click)="unSelectPhoto()"></span>
+        <img class="loading" src="https://picsum.photos/2000/1167?image={{selectedPhotoOB.id}}">
+        <a class="back" (click)="nextBackImage(-1)">&#10094;</a>
+        <a class="next" (click)="nextBackImage(1)">&#10095;</a>
+
+      </div>
+      <div (click)="unSelectPhoto()" class="closeSpace"></div>
+    </div>
+  </div>
+
+</div>
