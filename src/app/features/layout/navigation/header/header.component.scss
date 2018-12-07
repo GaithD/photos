@@ -1,0 +1,57 @@
+@import "variables";
+
+.menuContainer {
+  //padding-bottom: $menuHeight;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none; /* Standard syntax */
+
+  width: 100%;
+  height: $menuHeight;
+  display: block;
+
+  .menu {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: $menuHeight;
+    background-color: $primaryColor;
+    position: fixed;
+    z-index: 2;
+    box-shadow: 2px 2px 2px grey;
+
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+  }
+  .hamburgerMenu {
+    cursor: pointer;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    height: $menuHeight;
+
+
+
+    i {
+      color: #ffffff;
+      padding: 10px;
+      font-size: 30px;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, .05);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .logoDiv {
+    position: relative;
+    color: #ffffff;
+    font-size: 2em;
+    line-height: 19px;
+
+  }
+
+}

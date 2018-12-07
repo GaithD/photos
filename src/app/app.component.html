@@ -1,2 +1,15 @@
-<app-photos></app-photos>
-<app-header></app-header>
+ <app-navigation (contentExpand)="contentToggle($event)"></app-navigation>
+
+ <div class="contentMargin"  [@appContentExpandShrink]="appContentExpanded ? 'expand': 'shrink'" >
+   <div class="appContent" >
+     <div class="container">
+       <!--<mat-progress-spinner [mode]="'indeterminate'" style="position: fixed; left: 0; right: 0; top: 0; bottom: 0;  margin: auto; ">-->
+       <!--</mat-progress-spinner>-->
+
+       <router-outlet></router-outlet>
+     </div>
+   </div>
+ </div>
+
+
+

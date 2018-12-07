@@ -4,3 +4,49 @@
   background-size: 150px 140px;
 }
 
+
+@import "variables";
+@import "brand-material-colors";
+@include angular-material-theme($brand-theme);
+
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+::ng-deep .mat-select-panel {
+  z-index: 300 !important;
+}
+
+.btnRowGroup {
+  button {
+    margin-left: 8px;
+  }
+}
+
+.flexRowCenter{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.marginRight10{
+  margin-right: 10px;
+}
+
+
+.spanLftPading20{
+  padding: 0 20px 0 0;
+}
+
+.clickIcon{
+
+}

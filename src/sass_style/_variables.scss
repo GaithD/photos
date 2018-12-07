@@ -1,0 +1,46 @@
+//Colors
+$primaryColor: #6200ee;
+$secondaryColor: #f4511e;
+
+//Sizes
+$menuHeight: 60px;
+$sideNavWidth: 230px;
+
+//Break Points
+$superBigDesktop: 1700px;
+$bigDesktop: 1400px;
+$desktop: 1000px;
+$tablet: 999px;
+$mobile: 500px;
+
+@mixin superBigDesktop {
+  @media (min-width: #{$superBigDesktop}) {
+    @content;
+  }
+}
+
+@mixin bigDesktop {
+  @media (min-width: #{$bigDesktop}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+

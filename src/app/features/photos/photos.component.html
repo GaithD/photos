@@ -11,6 +11,7 @@
         <img class="loading" src="https://picsum.photos/2000/1167?image={{selectedPhotoOB.id}}">
         <a class="back" (click)="nextBackImage(-1)">&#10094;</a>
         <a class="next" (click)="nextBackImage(1)">&#10095;</a>
+        <span class="imageCounter" >{{(currentSelectedIndex +1) +' / ' +photos.length}}</span>
 
       </div>
       <div (click)="unSelectPhoto()" class="closeSpace"></div>

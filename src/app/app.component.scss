@@ -1,1 +1,31 @@
+@import "variables";
 
+.contentMargin {
+  visibility: hidden;
+  margin-left: $sideNavWidth;
+}
+
+.appContent {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow-wrap: break-word;
+  overflow: hidden;
+
+  .container {
+    padding: 20px 55px;
+    @include mobile {
+      padding: 20px 20px;
+    }
+
+    @include bigDesktop {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
+    @include superBigDesktop {
+      padding-left: 180px;
+      padding-right: 180px;
+    }
+
+  }
+
+}

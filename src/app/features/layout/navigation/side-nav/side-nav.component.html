@@ -1,0 +1,49 @@
+<nav class="menuNav" [@smCloseOpen]="sideMenuOpen ? 'open': 'closed'">
+  <div class="sm_items">
+    <ul class="sm_ul">
+      <li class="" *ngFor="let item of sideMenuItems">
+
+        <div class="sm_item_box " [ngClass]="{'sm_itm_active' : item.active }"
+             (click)="meuItemClick(item)">
+          <i class="material-icons sm_itm_icon" *ngIf="item.iconText">
+            {{item.iconText}}
+          </i>
+          <img *ngIf="!item.iconText && item.iconImg" [src]="item.iconImg" alt="ClaimsModel"
+               aria-hidden="true" class="sm_itm_icon">
+
+          <span>{{item.title}} </span>
+          <i *ngIf="item.child.length > 0" class="material-icons sm_expand_itm"
+             [@smToggleItems]="item.active ? 'open': 'closed'">
+            expand_more
+          </i>
+        </div>
+
+        <div *ngIf="item.child.length > 0" class="sm_sub_item_box"
+             [@smToggleSubMenu]="item.active  ? 'open': 'closed'">
+          <ul class="sm_ul">
+            <li *ngFor="let child of item.child" (click)="meuItemClick(child); item.active=true;">
+
+
+              <div class="sm_item_box sm_sub_itm " [ngClass]="{'sm_sub_itm_active' : child.active }">
+                <i class="material-icons sm_itm_icon" *ngIf="child.iconText">
+                  {{child.iconText}}
+                </i>
+                <span>{{child.title}}</span>
+
+              </div>
+
+            </li>
+
+
+          </ul>
+        </div>
+      </li>
+
+
+    </ul>
+
+  </div>
+</nav>
+
+
+

@@ -1,0 +1,97 @@
+@import "variables";
+
+//Main Side menu nav tag
+//Here is where the side nav container if designed
+.menuNav {
+  position: fixed;
+  height: 100%;
+  background-color: #FFFFFF;
+  top: $menuHeight;
+  width: $sideNavWidth;
+  left: 0;
+  overflow-x: hidden;
+  z-index: 1;
+  -webkit-transition: left 200ms; /* For Safari 3.1 to 6.0 */
+  transition: left 200ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  box-shadow: 1px 0 1px grey;
+}
+
+//This a div the gives a margin and padding to all its child, its used to margin all elements in the size
+// position
+.sm_items {
+  margin: 10px 0 0 0;
+  padding: 12px 8px 52px 8px;
+
+  // The ul of each items group
+  .sm_ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 8px 0;
+  }
+
+  // the li of items
+  //Here is where the hover and active draw
+  .sm_item_box {
+    line-height: 40px;
+
+    cursor: pointer;
+    $RLPadding: 10px; //Left and right padding
+    display: flex;
+    align-items: center;
+    padding: 0 $RLPadding 0 $RLPadding;
+    margin: 0 0 0 0;
+    color: #616161;
+
+    .sm_itm_icon {
+      width: 30px;
+      //color: $mainColor;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      -webkit-user-drag: none;
+    }
+
+    //The text of each item
+    span {
+      display: inline-block;
+      padding: 0 10px 0 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    //the expand icon at the end of the li
+    .sm_expand_itm {
+      display: inline-block;
+      position: absolute;
+      right: $RLPadding; // the possition is absoulte and the right equals the left and right padding of main li
+    }
+    //when the li is hovered apply background
+    &:hover {
+      background-color: rgba(0, 0, 0, .03);
+
+    }
+  }
+  .sm_sub_item_box{
+    //display: none;
+  }
+  .sm_sub_itm {
+    padding: 0 0 0 20px;
+  }
+  .sm_sub_itm_active {
+    border-left: 2px solid $secondaryColor;
+    color: $secondaryColor
+  }
+  //Item active background
+  .sm_itm_active {
+    background-color: rgba(0, 0, 0, .05);
+    font-weight: bold;
+    color: #212121;
+    border-radius: 2px;
+  }
+
+}
+
+

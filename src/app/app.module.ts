@@ -1,20 +1,22 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
+import {MatProgressSpinnerModule} from '@angular/material';
 
 import {AppComponent} from './app.component';
-import {PhotosComponent} from './features/photos/photos.component';
-import {PhotoFrameComponent} from './features/photos/photo-frame/photo-frame.component';
+import {NavigationModule} from './features/layout/navigation/navigation.module';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PhotoFrameComponent,
-    PhotosComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    NavigationModule,
+    AppRoutingModule
 
   ],
   providers: [],
